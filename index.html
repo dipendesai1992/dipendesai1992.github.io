@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Bitnami: Open Source. Simplified</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<span class="total" style="
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    font-size: 100px;
+">000</span>
+	<div>	
+		<div style="width:100%;display: inline-block;margin-bottom: 8px;"><label>Test 1</label><input price='80'  style="
+    width: 25%;
+    float: right;
+    text-align: center;
+    font-size: 25px;
+" class="item_qty" name="test_1" Type="number"/></div>
+		<div style="width:100%;display: inline-block;margin-bottom: 8px;"><label>Test 2</label><input price='3' style="
+    width: 25%;
+    float: right;
+    text-align: center;
+    font-size: 25px;
+" class="item_qty" name="test_2" Type="number"/></div>
+		<br/>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+	<script>
+		jQuery(document).ready(function(){
+			jQuery('.item_qty').change(function(){
+			
+					var price =0;
+					jQuery( ".item_qty" ).each(function( index ) {
+					  var qty = jQuery(this).val();
+					  var price1 = jQuery(this).attr('price');
+					  price=price+(((price1))*((qty)));
+					});
+			
+				
+				
+				jQuery('.total').html(price);
+				
+			})
+		})
+	</script>
+</head>
+<body>
+  
+</body>
+</html>
